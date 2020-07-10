@@ -1,0 +1,178 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  box-sizing: inherit; 
+}
+body, 
+main,
+section,
+header, .info, .forecast-table,footer
+{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+text-align: center;
+color:white;
+font-size: 1rem;
+}
+
+body{
+  background-image: linear-gradient(-20deg, rgba(58, 181, 176, .1), rgba(61, 153, 190, .3), rgba(86, 49, 122, .8)),
+  url('../img/storm3.gif');
+  background-size: contain, cover;
+  background-position: center;
+}
+
+.container{
+  min-height: 100vh;
+}
+
+header{
+  width: 70%;
+}
+
+strong{
+  font-size: 1rem;
+}
+
+hr {
+  border-top: 1px solid rgba(234, 238, 238, 0.1);
+}
+
+img{
+  width: 30%;
+}
+
+section{
+  flex-flow:row wrap;
+  width: 65%;
+  margin:1rem;
+}
+
+.hide{
+  display:none;
+  font-size: 2rem;
+}
+.show{
+  display: flex;
+}
+
+.info{
+  flex: 1 1 30%;
+  margin: .3rem;
+  padding: 2rem;
+  color: #ffffff;
+  border-radius:2rem;
+  background-color:#17A2B8;
+}
+.forecast-table{
+  margin:0 auto;
+  padding: 0;
+  width:80%;
+  margin-bottom: 3rem;
+}
+.forecast-table h1{
+  width:80%;
+  margin-bottom: 3rem;
+
+}
+.forecast-table img{
+  filter: drop-shadow(5px 5px 1px #cbcaca);
+  width:50px;
+}
+table{ 
+  text-transform: uppercase;
+  border-spacing: 1; 
+  border-collapse: collapse; 
+  background:white;
+  border-radius:6px;
+  overflow:hidden;
+  width:100%;
+  color:black;
+  margin-bottom: 5rem;
+  font-size:1rem;
+}
+  
+  td,th           { 
+    padding-left:8px}
+
+  thead tr        { 
+    height:60px;
+    background:#ffd400;
+
+  }
+  
+  tbody tr        { 
+    height:48px; border-bottom:1px solid #E3F1D5 ;
+
+  }
+
+ 	td,th{ 
+     text-align:center
+  }
+  
+  .city, .country, .temp{
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: 'Staatliches', cursive;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  .min, .max, .icon{
+    text-align: center;
+
+  }
+
+footer{
+  background-color: #3C316A;
+  width: 100%;
+  padding:2rem;
+  flex: 1;
+  color: white;
+  text-align: center;
+}
+
+
+@media(min-width:250px)and (max-width:600px) {
+  section{
+    flex-flow:row wrap;
+    align-items: stretch;
+    width:80%
+  }
+  .city, .country, .temp{
+    font-size: 2rem;
+  }
+  .info{
+    margin: .5rem;
+    padding: .2rem;
+    border-radius:1rem;
+  }
+  .forecast-table h1{
+   font-size: 2rem;
+  }
+  .forecast-table {
+    width:80%;
+   }
+   img{
+     width:50%;
+   }
+}
+@media(min-width:760px)and (max-width:2100px) {
+  section{
+    flex-flow:row wrap;
+    align-items: stretch;
+
+  }
+  .city, .country, .temp{
+    font-size: 3rem;
+  }
+
+  table{ 
+    width:80%;
+  }
+
+
+}
